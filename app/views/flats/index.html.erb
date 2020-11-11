@@ -1,0 +1,24 @@
+<div class="container mt-3">
+  <h1>All our flats (<%= @flats.count > 0 ? @flats.count : 0 %>)</h1>
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col col-12 col-md-6 col-lg-4 mb-3">
+        <div class="shadow-sm bg-light">
+            <div class="p-3">
+              <p class="h4"><%= flat.name %></p>
+              <p><%= flat.address %></p>
+              <div class="row align-items-center">
+                <span class="col col-auto pr-1"><i class="material-icons">people</i></span>
+                <span class="col col-auto pr-2"><%= flat.number_of_guests %></span>
+                <span class="col col-auto pr-1"><i class="material-icons">euro_symbol</i></span>
+                <span class="col col-auto pr-1"><%= flat.price_per_night %></span>
+              </div>
+            </div>
+            <div class="bg-white p-3 border-top">
+              <%= link_to  "More info", flat_path(flat) %>
+            </div>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>

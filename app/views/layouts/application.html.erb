@@ -5,11 +5,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="container-fluid">
+      <nav class="navbar navbar-light bg-light">
+        <%= link_to  "Simple Airbnb", root_path, class: 'navbar-brand' %>
+        <%= link_to  "Add flat", new_flat_path, class: 'btn btn-outline-primary' %>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

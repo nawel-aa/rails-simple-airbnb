@@ -1,0 +1,8 @@
+<%= simple_form_for @flat do |f| %>
+<%= f.input :name, label: "Title" %>
+<%= f.input :address %>
+<%= f.input :description, as: :text %>
+<%= f.input :price_per_night, as: :integer %>
+<%= f.input :number_of_guests, as: :integer %>
+<%= f.button :submit, class: 'btn btn-primary mt-3', value: "Add flat" %>
+<% end %>
